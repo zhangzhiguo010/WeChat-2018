@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/WeChat-2018/precache-manifest.82bbdc43e132bc5835382129086e5d22.js"
+  "/WeChat-2018/build/precache-manifest.13b3827b189b008e6284f30886abcbde.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/WeChat-2018/index.html", {
+workbox.routing.registerNavigationRoute("/WeChat-2018/build/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
