@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/WeChat-2018/build/static/css/main.4e4cc257.chunk.css"
   },
   {
-    "revision": "d7dd67f19b51445b2d59b844cd79237f",
+    "revision": "188f76c17b0044e507e73e5991036cea",
     "url": "/WeChat-2018/build/index.html"
   }
 ];
