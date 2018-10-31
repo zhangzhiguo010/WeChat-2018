@@ -19,9 +19,9 @@ class Home extends Component{
         let token = getToken()
         return (
             <div>
-                {/* {!token && 
+                {!token && 
                     history.location.pathname!=='/login' ? history.push('/login') : 
-                null} */}
+                null}
             </div>
         )
     }
