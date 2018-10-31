@@ -42,7 +42,9 @@
 }
 
 .dlg_wrapper > .dlg > .dlg_main{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 } 
 
 .dlg_wrapper > .dlg > .dlg_footer{

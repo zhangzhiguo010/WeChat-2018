@@ -5,9 +5,6 @@ import {addTextMsg} from '../../../data/actions/message'
 import Avator from '../../common/avator/index'
 import './index.css'
 
-// session: 邢晓栋
-// msgList: 所有的所有消息
-
 @connect(
     (state)=>{return {
         session: state.currentSession.session,      // sessionList组件中我选择的好友（我点击的Link）
@@ -25,9 +22,7 @@ class BubblePanel extends Component{
     }
     componentWillMount(){
         this.handleUserInput = (ev)=>{
-            this.setState({
-                message: ev.target.value
-            })
+            this.setState({message: ev.target.value})
         }
         this.sendMessage = ()=>{
             let {addTextMsg, session, chatType} = this.props
@@ -35,7 +30,7 @@ class BubblePanel extends Component{
             this.setState({
                 message: ''
             })
-            addTextMsg(session.name, message, chatType)
+            this.state.message.trim()!=='' && addTextMsg(session.name, message, chatType)
         }
         this.getAloneMessage = ()=>{
             let {msgList, session} = this.props
@@ -57,6 +52,7 @@ class BubblePanel extends Component{
                     {session ? session.name : ''}
                 </div>
                 <div className="bp_main" ref={(content)=>{this.mainRef = content}}>
+                    <div className="timeHint"></div>
                     {
                         aloneMessage.map((item)=>{
                             return <MessageItemErrorWrapper key={item.id} msg={item} />
@@ -68,7 +64,7 @@ class BubblePanel extends Component{
                         value={this.state.message}
                         onChange={this.handleUserInput} 
                     />
-                    <button className='sendButton' onClick={this.sendMessage}>发送</button>
+                    <div className='sendButton' onClick={this.sendMessage}>发送</div>
                 </div>
             </div>
         )
@@ -111,17 +107,12 @@ class MessageItem extends Component{
         })      
         return (
             <div className={mi_item}>
-                <div className='mi_photo'>
-                    <Avator type='user' />
-                </div>
-                <div className='mi_details'>
-                    <div className='mi_name'>
-                        {msg.from}
-                    </div>
-                    <div className='mi_text'>
-                        {msg.value}
-                    </div>
-                </div>
+                <figure className='mi_photo'>
+                    <img src={require('../../../img/photo_other.jpg')} alt="头像"/>
+                </figure>
+                <p className='mi_text'>
+                    {msg.value}
+                </p>
             </div>
         )
     }

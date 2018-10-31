@@ -16,7 +16,7 @@ class SlideBar extends Component{
                             />
                         </div>,
                 footer: <div className='sb_dlg_footer_inner'>
-                            <button onClick={this.confirmAddFriend}>确定</button>
+                            <div className="button" onClick={this.confirmAddFriend}>确定</div>
                         </div>
             })
         }
@@ -41,12 +41,12 @@ class SlideBar extends Component{
                 </div>
                 <div className='sb_main'>
                     <div className="icon_wrapper chat">
-                        <i class="iconfont icon-chat"></i>
+                        <i className="iconfont icon-chat"></i>
                     </div>
                 </div>
                 <div className='sb_footer'>
                     <dir className="icon_wrapper setting" onClick={this.showAddFriend}>
-                        <i class="iconfont icon-shezhi"></i>
+                        <i className="iconfont icon-shezhi"></i>
                     </dir>
                 </div>
             </div>
