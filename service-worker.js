@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/WeChat-2018/build/precache-manifest.66ab14feb07bbe4e7a74f0722b7d00c9.js"
+  "/WeChat-2018/build/precache-manifest.cde6532e1f4d2d434ff8cf63a0948167.js"
 );
 
 workbox.clientsClaim();
