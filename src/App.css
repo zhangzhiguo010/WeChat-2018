@@ -1,0 +1,45 @@
+*{margin: 0; padding: 0;}
+*{box-sizing: border-box;}
+h1, h2, h3, h4, h5, h6{font-weight: normal;}
+a{text-decoration: none; color: inherit;}
+ul, ol{list-style: none;}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 884901 */
+  src: url('//at.alicdn.com/t/font_884901_z69ddi28qoo.eot');
+  src: url('//at.alicdn.com/t/font_884901_z69ddi28qoo.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_884901_z69ddi28qoo.woff') format('woff'),
+  url('//at.alicdn.com/t/font_884901_z69ddi28qoo.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_884901_z69ddi28qoo.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before { content: "\e687"; }
+.icon-danliao:before { content: "\e6c4"; }
+.icon-qunliao:before { content: "\e65f"; }
+.icon-tuichu:before { content: "\e615"; }
+.icon-shezhi:before { content: "\e887"; }
+.icon-guanbi:before { content: "\e600"; }
+
+body{
+  line-height: 1.6;
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+  color: #222;
+  font-size: 14px;
+}
+
+#root{
+  background: #eee;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

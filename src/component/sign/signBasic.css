@@ -1,0 +1,113 @@
+.signBasic{
+    border-top: 4px solid #44B549;
+    background: #fff;
+    font-size: 16px;
+    header{
+        width: 100%;
+        height: 82px;
+        .header_inner{
+            margin: 0 auto;
+            width: 960px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo{}
+            .signUpBtn{
+                display: flex;
+                align-items: center;
+                a{
+                    border: 0;
+                    outline: none;
+                }
+                a::before{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 17px;
+                    height: 16px;
+                    margin-bottom: 2px;
+                    margin-right: 5px;
+                    background: transparent url(../../img/sign_signUpIcon.svg) no-repeat center;
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+        height: 312px;
+        background: transparent url(../../img/signBackgroundImg.png) no-repeat center 0;
+        background-color: #090b1a;
+        .main_inner{
+            margin: 0 auto;
+            width: 960px;
+            height: 100%;
+            padding: 22px 0;
+            display: flex;
+            justify-content: flex-end;
+            form{
+                background: #fff;
+                width: 400px;
+                height: 272px;
+                padding: 20px 35px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                h3{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .row{
+                    border: 1px solid #e7e7eb;
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        font-size: 18px;
+                        margin-right: 20px;
+                        margin-left: 15px;
+                        color: #cccccc;
+                    }
+                    input{
+                        display: inline-block;
+                        font-size: 14px;
+                        line-height: 36px;
+                        height: 36px;
+                        padding: 0 4px;
+                        background-color: #ffffff;
+                        cursor: text;
+                        border-radius: 2px;
+                        outline: none;
+                        border: 0;
+                    }
+                    input:-webkit-autofill{
+                        -webkit-box-shadow: 0 0 0 1000px white inset; 
+                    }
+                }
+                .button_wrapper{
+                    margin-top: 20px;
+                    .button{
+                        margin: 0;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 120px;
+                        height: 33px;
+                        border-radius: 3px;
+                        background: #44b549;
+                        color: #fff;
+                        border: 0;
+                        outline: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .button:hover{
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+        }
+    }
+}

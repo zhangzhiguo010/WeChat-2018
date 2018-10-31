@@ -1,0 +1,68 @@
+.icon_wrapper{
+    text-align: center;
+}
+.icon_wrapper .iconfont{
+    font-size: 36px;
+    color: #ffffff;
+}
+/*  */
+.sb{
+    width: 90px;
+    padding: 0 8px;
+    background-color: #4eb1f4;
+}
+.sb_header{
+    margin-top: 10px;
+}
+.sb_header .myNickName{
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    margin: 5px 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+.sb_main .chat{
+    margin-bottom: 15px;
+}
+.sb_footer{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 10px;
+}
+/* ********* dialog组件样式 *******************/
+.sb_dlg_header_inner input{
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 20px 0;
+    border-radius: 2px;
+    background: #ffffff;
+    outline: none;
+    border: 0;
+}
+.sb_dlg_footer_inner{
+    display: inline-block;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.sb_dlg_footer_inner button{
+    font-size: 16px;
+    padding: 5px 8px;
+    color: #ffffff;
+    background-color: #4eb1f4;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+// 最左边的栏目

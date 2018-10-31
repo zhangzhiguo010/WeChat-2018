@@ -1,0 +1,97 @@
+.bp{
+    height: 100%;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.bp_header{
+    flex-shrink: 0;
+    border-bottom: 1px solid #eee;
+    // border: 1px solid red;
+    height: 50px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+.bp_main{
+    flex-grow: 1;
+    overflow: auto;
+}
+.bp_main .mi_item{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.bp_main .me{
+    justify-content: flex-end;
+}
+.bp_main .you{
+    justify-content: flex-start;
+}
+.bp_main .me .mi_photo{
+    order: 1;
+    margin-left: 15px;
+}
+.bp_main .you .mi_photo{
+    order: 0;
+    margin-right: 15px;
+}
+.bp_main .mi_photo .iconfont{
+    font-size: 36px;
+}
+
+.bp_main .mi_item .mi_details .mi_text{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.bp_main .mi_text{
+    padding: 7px;
+    border-radius: 3px;
+}
+.bp_main .me .mi_text{
+    background: #4eb1f4;
+    color: #fff;
+}
+.bp_main .you .mi_text{
+    background: #d5d5d5;
+}
+.bp_footer{
+    flex-shrink: 0;
+    // border: 1px solid red;
+    height: 180px;
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bp_footer .textArea{
+    width: 100%;
+    height: 170px;
+    border: 0;
+    outline: none;
+    margin-bottom: 10px;
+}
+.bp_footer .sendButton{
+    font-size: 14px;
+    font-weight: bold;
+    height: 60px;
+    padding: 0 25px;
+    background: #4eb1f4;
+    color: #fff;
+    border: 0;
+    outline: none;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+聊天页

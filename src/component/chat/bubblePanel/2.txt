@@ -1,0 +1,42 @@
+.sessionList{
+    width: 240px;
+    border-right: 1px solid #eee;
+}
+
+.sessionItem{
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+.selected{
+    background: #afd9f5;
+}
+.sessionItem:last-child{
+    border-bottom: none;
+}
+.sessionItem > a{
+    display: flex;
+    align-items: flex-start;
+}
+.sessionItem > a > .sm_lf{
+    margin-right: 10px;
+}
+
+.sessionItem > a > .sm_rt{}
+
+.sessionItem > a > .sm_rt > .sm_friendName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sessionItem > a > .sm_rt > .sm_friendPreview{
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    display: -webkit-box;  
+    -webkit-line-clamp: 2;  
+    -webkit-box-orient: vertical; 
+}
+
+
+朋友列表

@@ -1,0 +1,11 @@
+.tooltips{
+    width: 400px;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    margin-left: -200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #aaaaaa;
+}
