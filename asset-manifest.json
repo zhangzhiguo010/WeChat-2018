@@ -1,7 +1,7 @@
 {
-  "main.css": "/WeChat-2018/build/static/css/main.878f37e2.chunk.css",
-  "main.js": "/WeChat-2018/build/static/js/main.74b69817.chunk.js",
-  "main.js.map": "/WeChat-2018/build/static/js/main.74b69817.chunk.js.map",
+  "main.css": "/WeChat-2018/build/static/css/main.fe6349af.chunk.css",
+  "main.js": "/WeChat-2018/build/static/js/main.1ba6ffc3.chunk.js",
+  "main.js.map": "/WeChat-2018/build/static/js/main.1ba6ffc3.chunk.js.map",
   "static/js/1.9a9aebe0.chunk.js": "/WeChat-2018/build/static/js/1.9a9aebe0.chunk.js",
   "static/js/1.9a9aebe0.chunk.js.map": "/WeChat-2018/build/static/js/1.9a9aebe0.chunk.js.map",
   "runtime~main.js": "/WeChat-2018/build/static/js/runtime~main.0eae0317.js",
@@ -9,8 +9,8 @@
   "static/media/photo_other.jpg": "/WeChat-2018/build/static/media/photo_other.1969756e.jpg",
   "static/media/signBasic.css": "/WeChat-2018/build/static/media/sign_signUpIcon.1a0cf7bb.svg",
   "static/media/photo.jpg": "/WeChat-2018/build/static/media/photo.1fa99390.jpg",
-  "static/css/main.878f37e2.chunk.css.map": "/WeChat-2018/build/static/css/main.878f37e2.chunk.css.map",
+  "static/css/main.fe6349af.chunk.css.map": "/WeChat-2018/build/static/css/main.fe6349af.chunk.css.map",
   "index.html": "/WeChat-2018/build/index.html",
-  "precache-manifest.87624674d9831abc35d875a47f39a380.js": "/WeChat-2018/build/precache-manifest.87624674d9831abc35d875a47f39a380.js",
+  "precache-manifest.e745dcb68d6ec4521083430f2feaa59f.js": "/WeChat-2018/build/precache-manifest.e745dcb68d6ec4521083430f2feaa59f.js",
   "service-worker.js": "/WeChat-2018/build/service-worker.js"
 }
