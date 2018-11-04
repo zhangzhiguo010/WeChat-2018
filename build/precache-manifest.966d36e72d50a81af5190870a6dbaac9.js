@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/WeChat-2018/build/static/js/runtime~main.0eae0317.js"
   },
   {
-    "revision": "1ba6ffc3076935c0048d",
-    "url": "/WeChat-2018/build/static/js/main.1ba6ffc3.chunk.js"
+    "revision": "5220e44e4343b8e1d77c",
+    "url": "/WeChat-2018/build/static/js/main.5220e44e.chunk.js"
   },
   {
-    "revision": "9a9aebe0617f481c2799",
-    "url": "/WeChat-2018/build/static/js/1.9a9aebe0.chunk.js"
+    "revision": "30ca343be815a42d0c2d",
+    "url": "/WeChat-2018/build/static/js/1.30ca343b.chunk.js"
   },
   {
-    "revision": "1ba6ffc3076935c0048d",
-    "url": "/WeChat-2018/build/static/css/main.fe6349af.chunk.css"
+    "revision": "5220e44e4343b8e1d77c",
+    "url": "/WeChat-2018/build/static/css/main.b4d1d9d1.chunk.css"
   },
   {
-    "revision": "028978a7de5f2a58dfc645ec20740ac0",
+    "revision": "6ff37f0154fcc4c77006ffedee95a4ef",
     "url": "/WeChat-2018/build/index.html"
   }
 ];

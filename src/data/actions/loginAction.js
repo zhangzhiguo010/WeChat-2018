@@ -1,7 +1,9 @@
-// import sdk from '../../sdk/init'
-// import actionCreator  from './actionCreator'
+// 收集用户输入的数据
+// 指定响应成功和失败时执行的函数
+// 和服务器建立联系
+// 成功时自动执行成功函数，失败时自动执行失败函数
 
-// const loginAction = actionCreator('LOGIN', 'status') 
+// 这里成功函数和失败函数，分别是在调用loginToServer时再then里指定的，做到了不一样的情景执行不一样的任务
 
 const loginToServer = (options)=>{
     return (dispatch, getState)=>{
@@ -18,18 +20,3 @@ const loginToServer = (options)=>{
 }
 
 export { loginToServer }
-
-// const loginToServer = (options)=>{
-//     return (dispatch, getState)=>{
-//         let startTime = Date.now()
-//         setTimeout(()=>{
-//             dispatch({
-//                 type: 'LOGIN',
-//                 payload: {
-//                     status: 100
-//                 }
-//             })
-//             console.log(Date.now() - startTime)
-//         }, 2000)
-//     }
-// }

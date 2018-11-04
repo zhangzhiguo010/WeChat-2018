@@ -1,14 +1,27 @@
 .sessionList{
+    flex-shrink: 0;
     width: 250px;
     height: 100%;
-    padding-top: 60px;
     background: #e8e7e5;
+    .addFriendBtn{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px dashed #a5a5a5;
+            padding: 2px 94px;
+            font-size: 16px;
+        }
+    }
     ul{
         .list{
             width: 100%;
             height: 62px;
             padding: 11px;
-            // outline: 1px solid red;
             background: #e8e7e5;
         }
         .listActive{
@@ -46,4 +59,96 @@
         }
     }
 
+}
+
+
+// 接收到别人的好友添加消息
+.sl_dlg_header_inner{
+    width: 200px;
+    height: 30px;
+    background-color: #cecece;
+    border-radius: 6px;
+    border: 2px solid red;
+    // overflow: hidden;
+    .who{
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
+    }
+    .message{
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
+    }
+}
+.sl_dlg_footer_inner{
+    display: flex;
+    justify-content: flex-end;
+    button{
+        border: 1px solid #f6f6f6;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 14px;
+        font-size: 14px;
+        border-radius: 3px;
+        background: #f0f0f0;
+        outline: none;
+        cursor: pointer;
+    }
+    .reject{
+        margin-right: 30px;
+    }
+}
+
+
+
+
+
+
+// 点击添加好友
+.sb_dlg_header_inner{
+    width: 200px;
+    height: 30px;
+    background-color: #cecece;
+    border-radius: 6px;
+    overflow: hidden;
+    input{
+        width: 100%;
+        height: 100%;
+        border: 0;
+        outline: none;
+        padding: 0 10px;
+    }
+}
+
+.sb_dlg_footer_inner{
+    border-radius: 5px;
+    .button{
+        border: 1px solid #f6f6f6;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 14px;
+        font-size: 14px;
+        border-radius: 3px;
+        background: #f0f0f0;
+        outline: none;
+        cursor: pointer;
+
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+    }
+    .button::after{
+        content: '';
+        display: inline-block;
+        width: 200%;
+        height: 200%;
+        border: 1px solid #c2c2c2;
+        transform: scale(.5);
+        transform-origin: left top;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }

@@ -12,6 +12,7 @@ import history from '../../history/history'
 )
 class SignUp extends Component{
     componentWillMount(){
+        // handleSignUp做三件事：收集用户输入、和服务器建立联系、指定成功任务和失败任务
         this.handleSignUp = (data)=>{
             if(!data.userName || !data.password || !data.nickName){
                 tooltip.show({
@@ -29,12 +30,10 @@ class SignUp extends Component{
             }
             this.props.signUpToServer(options).then(
                 ()=>{
-                    console.log('注册成功')
-                    history.push('/login')
+                    history.push('/login')          //注册成功时跳转到登录页面，让用户输入用户名和密码后即可正常使用
                 },
                 ()=>{
-                    console.log('注册失败')
-                    tooltip.show({
+                    tooltip.show({                  //注册失败时，给出一个提示
                         content: '注册失败了',
                         type: 'error'
                     })

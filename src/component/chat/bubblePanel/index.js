@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import classnames from 'classnames'
 import {addTextMsg} from '../../../data/actions/message'
-import Avator from '../../common/avator/index'
 import './index.css'
 
 @connect(

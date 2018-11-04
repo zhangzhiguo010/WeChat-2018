@@ -6,7 +6,6 @@ import tooltip from '../../component/common/tooltip/index'
 import history from '../../history/history'
 import {setToken} from '../../utils/token'
 
-// zhangzhiguo2580
 @connect(
     (state)=>{return {status: state.login.status}},
     {loginToServer: loginToServer}
@@ -14,7 +13,6 @@ import {setToken} from '../../utils/token'
 class Login extends Component{
     componentWillMount(){
         this.handleLogin = (data)=>{
-            // console.log('点击登录')
             if(!data.userName || !data.password){
                 tooltip.show({
                     type: 'error',
@@ -31,9 +29,8 @@ class Login extends Component{
             
             this.props.loginToServer(options).then(
                 (token)=>{
-                    setToken(token)
+                    setToken(token)                 // 登录成功后要把token记录下来
                     history.push('/chat')
-
                 },
                 (err)=>{
                     tooltip.show({

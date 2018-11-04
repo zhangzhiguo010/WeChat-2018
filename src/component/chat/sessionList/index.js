@@ -3,7 +3,6 @@ import dialog from '../../common/dialog/index'
 import { Link } from 'react-router-dom' 
 import {connect} from 'react-redux'
 import {currentSessionActon} from '../../../data/actions/session'
-import Avator from '../../common/avator/index'
 import eventEmitter from '../../../utils/event'
 import shallowequal from 'shallowequal'
 import './index.css'
@@ -12,54 +11,84 @@ import './index.css'
     (state)=>{return {allFriend: state.currentSession.allFriend}}
 )
 class SessionList extends Component{
-    componentWillMount(){       
-        eventEmitter.on('presence', this.handlePresence)
+
+    componentWillMount(){    
+        // 别人加我为好友时，弹出框 
+        eventEmitter.on('presence', (message)=>{
+            if (message.type === 'subscribe') {
+                dialog.show({
+                    title: '添加好友',
+                    content: <div className='sl_dlg_header_inner'>
+                                <p className='who'>{message.from}邀请加你为好友</p>
+                                <p className='message'>留言：{message.status}</p>
+                            </div>,
+                    footer: <div className='sl_dlg_footer_inner'>
+                                <button className='reject' onClick={this.reject.bind(this, message)}>拒绝</button>
+                                <button className='accept' onClick={this.accept.bind(this, message)}>同意</button>
+                            </div>
+                })
+            } 
+        })
+        this.accept = (message)=>{
+            sdk.conn.subscribed({     
+                to: message.from,
+                message : '[resp:true]'
+            });
+            sdk.conn.subscribe({        //需要反向添加对方好友
+                to: message.from,
+                message : '[resp:true]'
+            });
+            dialog.close()
+        }
+        this.reject = (message)=>{
+            sdk.conn.unsubscribed({
+                to: message.from,
+                message : 'rejectAddFriend'
+            })
+            dialog.close()
+        }
+
+
+        // 我加别人为好友时，弹出框
+        this.showAddFriend = ()=>{
+            dialog.show({
+                title: '添加好友',
+                content: <div className='sb_dlg_header_inner'>
+                            <input type="text" placeholder='输入名字'
+                                ref = {(content)=>{this.nickNameRef = content}}
+                            />
+                        </div>,
+                footer: <div className='sb_dlg_footer_inner'>
+                            <div className="button" onClick={this.confirmAddFriend}>确定</div>
+                        </div>
+            })
+        }
+        this.confirmAddFriend = ()=>{
+            sdk.conn.subscribe({
+                to: this.nickNameRef.value.trim(),
+                message: '你好，我是张治国，交个朋友呗！'
+            })
+            dialog.close()
+        }
+
     }
+    // 组件卸载前，把事件监听去掉
     componentWillUnmount(){
         eventEmitter.removeListener('presence', this.handlePresence)
     }
-    handlePresence(message){
-        // 信息类型是subscribe时，就是：“添加好友”
-        if (message.type === 'subscribe') {
-            dialog.show({
-                title: '好友申请',
-                content: <div>
-                            <div>{message.from}邀请你加为好友</div>
-                            <div>留言：{message.status}</div>
-                        </div>,
-                footer: <div>
-                            <button className='reject' onClick={this.reject.bind(this, message)}>拒绝</button>
-                            <button className='accept' onClick={this.accept.bind(this, message)}>同意</button>
-                        </div>
-            })
-        } 
-    }
-    accept(message){
-        sdk.conn.subscribed({     
-            to: message.from,
-            message : '[resp:true]'
-        });
-        sdk.conn.subscribe({        //需要反向添加对方好友
-            to: message.from,
-            message : '[resp:true]'
-        });
-        dialog.close()
-    }
-    reject(message){
-        sdk.conn.unsubscribed({
-            to: message.from,
-            message : 'rejectAddFriend'
-        })
-        dialog.close()
-    }
+
     render(){
         let {chatId, allFriend} = this.props
         return (
             <div className="sessionList">
+                <div className='addFriendBtn'>
+                    <i className="iconfont icon-hao" onClick={this.showAddFriend}></i>
+                </div>
                 <ul>{
                     allFriend.length===0 ? null : allFriend.map((item)=>{
                         let isSelected = chatId === item.name ? true : false
                         return (
+                            // 这里name就是唯一的，故可做key属性值
                             <li key={item.name} className={isSelected ? 'list listActive' : 'list'}>
                                 <SessionItem  friend={item}/>
                             </li>

@@ -21,7 +21,6 @@ function init(){
                 dispatch(fetchAllFriend())
             },
             onTextMessage: (message)=>{
-                console.log('收到一条消息')
                 message.value = message.value || message.data   // 做个兼容
                 addTextMsgAndChangeFriendList(message.from, message)(dispatch, getState)
             },
@@ -29,7 +28,6 @@ function init(){
                 dispatch(fetchAllFriend())
             },
             onPresence: (message)=>{   // 别人发来的关于“好友请求”的信息，执行此函数
-                // this.handlePresence(message)
                 eventEmitter.emit('presence', message)
             }
         }) 

@@ -58,9 +58,7 @@ class SignBasic extends Component{
             <div className="signBasic">
                 <header>
                     <div className='header_inner'>
-                        <h1 className='logo'>
-                            <a href="#">张治国 聊天小作品</a>
-                        </h1>
+                        <h1 className='logo'>张治国 聊天小作品</h1>
                         <div className='signUpBtn'>
                             <Link to={this.state.hint.aLink}>{this.state.hint.footer}</Link>
                         </div>
@@ -72,8 +70,7 @@ class SignBasic extends Component{
                             <h3>{this.state.hint.header}</h3>
                             <div className='row'>
                                 <i className="iconfont icon-photo"></i>
-                                <input type="text" name="userName" placeholder="用户名" className="input"
-                                    autoFocus
+                                <input type="text" name="userName" placeholder="用户名" className="input firstInput"
                                     value={this.state.userName} 
                                     onChange={this.changeInput}
                                 />
@@ -89,7 +86,7 @@ class SignBasic extends Component{
                             {this.state.hint.showNickName ? 
                                 <div className='row'>
                                     <i className="iconfont icon-photo"></i>
-                                    <input type="nickName" name="nickName" placeholder="输入昵称" className="input"
+                                    <input type="text" name="nickName" placeholder="输入昵称" className="input"
                                         value={this.state.nickName} 
                                         onChange={this.changeInput}
                                     /> 
