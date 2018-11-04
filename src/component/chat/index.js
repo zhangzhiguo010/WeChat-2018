@@ -21,7 +21,7 @@ class Chat extends Component{
             <div className="ctn-chat">
                 <SlideBar />
                 <SessionList chatType={chatType} chatId={friendName}/>
-                {friendName ? <BubblePanel chatType={chatType} chatId={friendName} /> : null}
+                <BubblePanel chatType={chatType} chatId={friendName} />
             </div>
         )
     }

@@ -91,14 +91,41 @@
         background: #ffffff;
         font-size: 16px;
         word-wrap: break-word;
+        position: relative;
     }
 }
 
 .me{
     justify-content: flex-end;
+    .mi_text{
+        color: #ffffff;
+        background: #0db905;
+        .san{
+            border: 7px solid #0db905;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            position: absolute;
+            right: -13px;
+            top: 0;
+        }
+    }
 }
 .you{
     justify-content: flex-start;
+    .mi_text{
+        color: #000;
+        background: #ffffff;
+        .san{
+            border: 7px solid #ffffff;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            position: absolute;
+            left: -13px;
+            top: 0;
+        }
+    }
 }
 .me .mi_photo{
     order: 1;

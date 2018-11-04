@@ -30,14 +30,15 @@ class BubblePanel extends Component{
             this.setState({
                 message: ''
             })
-            this.state.message.trim()!=='' && addTextMsg(session.name, message, chatType)
+            session && this.state.message.trim()!=='' && addTextMsg(session.name, message, chatType)
         }
         this.getAloneMessage = ()=>{
             let {msgList, session} = this.props
             // if(!session){
             //     return []
             // }
-            return msgList[session.name] || []
+            let xx = session!==null ? session.name : ''
+            return msgList[xx] || []
         }
     }
     componentDidUpdate(){
@@ -110,9 +111,11 @@ class MessageItem extends Component{
                 <figure className='mi_photo'>
                     <img src={require('../../../img/photo_other.jpg')} alt="头像"/>
                 </figure>
-                <p className='mi_text'>
+                <div className='mi_text'>
+                    
                     {msg.value}
-                </p>
+                    <div className='san'></div>
+                </div>
             </div>
         )
     }

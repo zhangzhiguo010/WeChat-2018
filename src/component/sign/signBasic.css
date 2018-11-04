@@ -71,6 +71,7 @@
                         color: #cccccc;
                     }
                     input{
+                        flex-grow: 1;
                         display: inline-block;
                         font-size: 14px;
                         line-height: 36px;
