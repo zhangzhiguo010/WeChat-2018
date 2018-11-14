@@ -7,7 +7,7 @@ import history from '../../history/history'
 
 
 @connect(
-    (state)=>{return {status: state.signUp.status}},
+    ()=>({}),
     {signUpToServer: signUpToServer}
 )
 class SignUp extends Component{
@@ -30,10 +30,10 @@ class SignUp extends Component{
             }
             this.props.signUpToServer(options).then(
                 ()=>{
-                    history.push('/login')          //注册成功时跳转到登录页面，让用户输入用户名和密码后即可正常使用
+                    history.push('/login')  
                 },
                 ()=>{
-                    tooltip.show({                  //注册失败时，给出一个提示
+                    tooltip.show({                
                         content: '注册失败了',
                         type: 'error'
                     })
@@ -43,7 +43,7 @@ class SignUp extends Component{
     }
     render(){
         return (
-            <SignBasic hint="signUp" handleSignUp={this.handleSignUp} status={this.props.status}/>
+            <SignBasic hint="signUp" handleSignUp={this.handleSignUp} />
         )
     }
 }

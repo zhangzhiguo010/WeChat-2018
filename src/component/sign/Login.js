@@ -7,7 +7,7 @@ import history from '../../history/history'
 import {setToken} from '../../utils/token'
 
 @connect(
-    (state)=>{return {status: state.login.status}},
+    ()=>({}),
     {loginToServer: loginToServer}
 )
 class Login extends Component{
@@ -43,7 +43,7 @@ class Login extends Component{
     }
     render(){
         return (
-            <SignBasic hint="login" handleLogin={this.handleLogin} status={this.props.status}/>
+            <SignBasic hint="login" handleLogin={this.handleLogin} />
         )
     }
 }

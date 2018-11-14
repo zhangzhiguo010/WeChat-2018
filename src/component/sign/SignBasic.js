@@ -10,7 +10,6 @@ import './signBasic.css'
     }
 })
 
-
 class SignBasic extends Component{
     constructor(props){
         super(props)

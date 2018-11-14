@@ -20,8 +20,7 @@ class Home extends Component{
         return (
             <div>
                 {!token && 
-                    history.location.pathname!=='/login' ? history.push('/login') : 
-                null}
+                    history.location.pathname!=='/login' ? history.push('/login') : null}
             </div>
         )
     }
