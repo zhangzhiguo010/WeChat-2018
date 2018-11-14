@@ -70,7 +70,6 @@ class SessionList extends Component{
             })
             dialog.close()
         }
-
     }
     // 组件卸载前，把事件监听去掉
     componentWillUnmount(){
@@ -95,11 +94,6 @@ class SessionList extends Component{
                         )
                     })
                 }</ul>
-
-                {/* {allFriend.length===0 ? null : allFriend.map((item)=>{   
-                    let isSelected = chatId === item.name ? true : false
-                    return <SessionItem key={item.name} friend={item} isSelected={isSelected}/>
-                })} */}
             </div>
         )
     }

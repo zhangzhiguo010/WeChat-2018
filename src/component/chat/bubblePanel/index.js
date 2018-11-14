@@ -6,8 +6,8 @@ import './index.css'
 
 @connect(
     (state)=>{return {
-        session: state.currentSession.session,      // sessionList组件中我选择的好友（我点击的Link）
-        msgList: state.message.msgList              // 所有好友所有信息
+        session: state.currentSession.session,  
+        msgList: state.message.msgList            
     }},
     {addTextMsg}
 )
@@ -33,11 +33,9 @@ class BubblePanel extends Component{
         }
         this.getAloneMessage = ()=>{
             let {msgList, session} = this.props
-            // if(!session){
-            //     return []
-            // }
-            let xx = session!==null ? session.name : ''
-            return msgList[xx] || []
+            if(!session){return []}
+            let name = session!==null ? session.name : ''  
+            return msgList[name] || []
         }
     }
     componentDidUpdate(){
@@ -72,7 +70,6 @@ class BubblePanel extends Component{
 }
 
 export default BubblePanel
-
 
 class MessageItemErrorWrapper extends Component{
     constructor(props){

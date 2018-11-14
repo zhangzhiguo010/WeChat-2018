@@ -15,7 +15,6 @@ class Chat extends Component{
         this.props.init()
     }
     render(){    
-        // 点击Link链接，渲染chat页面（不重载），读取location信息，传给sessionList子组件，现在换了一种方式，此处没用上
         let {chatType, friendName} = Object.assign({}, this.props.location.state)
         return (
             <div className="ctn-chat">
