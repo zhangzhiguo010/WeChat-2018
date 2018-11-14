@@ -48,7 +48,6 @@ class SessionList extends Component{
             dialog.close()
         }
 
-
         // 我加别人为好友时，弹出框
         this.showAddFriend = ()=>{
             dialog.show({
